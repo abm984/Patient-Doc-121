@@ -33,7 +33,7 @@ type PromptKey = keyof typeof PROMPT_OPTIONS;
 
 
 const App: React.FC = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 900);
 
   const [appState, setAppState] = useState<AppState>({
     status: Status.Idle,
@@ -44,7 +44,7 @@ const App: React.FC = () => {
   });
 
   useEffect(() => {
-    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 900);
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -200,7 +200,6 @@ const App: React.FC = () => {
       {/* Note Configuration */}
       {appState.status === Status.Idle && (
         <div className="mb-8 p-6 bg-gray-50/80 rounded-2xl border border-gray-200 shadow-sm max-w-2xl mx-auto">
-          <h2 className="text-lg font-semibold text-gray-700 mb-3">Note Configuration</h2>
           
           <div className="space-y-4">
             {/* Note Type */}
