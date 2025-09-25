@@ -11,8 +11,6 @@ import { Status, AppState } from './types';
 
 
 
-
-
 const PROMPT_OPTIONS = {
   general: {
     label: 'SOAP Note',
@@ -35,6 +33,8 @@ type PromptKey = keyof typeof PROMPT_OPTIONS;
 
 
 const App: React.FC = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+
   const [appState, setAppState] = useState<AppState>({
     status: Status.Idle,
     transcript: [],
@@ -42,6 +42,17 @@ const App: React.FC = () => {
     isSummarizing: false,
     clinicalSummary: null,
   });
+
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
+
+
   const [isProcessing, setIsProcessing] = useState(false);
   const [promptKey, setPromptKey] = useState<PromptKey>('general');
   const [customPrompt, setCustomPrompt] = useState<string>('');
@@ -300,7 +311,14 @@ const App: React.FC = () => {
           Generate
         </button>
 
-        <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', padding: '20px' }}>
+        <div
+            style={{
+              display: 'flex',
+              flexDirection: isSmallScreen ? 'column' : 'row',
+              gap: '20px',
+              padding: '20px',
+            }}
+          >
           <ClinicalSummaryDisplay
             status={appState.status}
             isSummarizing={appState.isSummarizing}
