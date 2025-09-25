@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Live Dialogue Transcriber",
+  "description": "An application that records a live conversation, uses a multimodal AI model to transcribe it, and displays the transcript in a dialogue format, identifying each speaker.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
