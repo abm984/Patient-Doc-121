@@ -94,6 +94,7 @@ export const transcribeAndDiarize = async (audioBase64: string, mimeType: string
 
 const generalSummaryPrompt = `
 You are a clinical summarizer. Read the transcript below and output TWO things:
+  It must write in 
 
   (A) Clinical Summary (SOAP format)
   S: (Subjective)

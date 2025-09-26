@@ -330,6 +330,15 @@ const App: React.FC = () => {
             icdCode={appState.icdCode} */}
           {/* /> */}
         </div>
+
+
+          style={{
+              display: 'flex',
+              flexDirection: isSmallScreen ? 'column' : 'row',
+              gap: '20px',
+              padding: '20px',
+            }}
+
           <TreatmentPlanDisplay
             status={appState.status}
             isSummarizing={appState.isSummarizing}
