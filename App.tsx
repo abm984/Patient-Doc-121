@@ -323,17 +323,18 @@ const App: React.FC = () => {
             isSummarizing={appState.isSummarizing}
             summary={appState.clinicalSummary}
           />
-          <TreatmentPlanDisplay
-            status={appState.status}
-            isSummarizing={appState.isSummarizing}
-            treatmentPlan={appState.treatmentPlan}
-          />
+
           {/* <ICDCodeDisplay
             status={appState.status}
             isSummarizing={appState.isSummarizing}
             icdCode={appState.icdCode} */}
           {/* /> */}
         </div>
+          <TreatmentPlanDisplay
+            status={appState.status}
+            isSummarizing={appState.isSummarizing}
+            treatmentPlan={appState.treatmentPlan}
+          />
           <ICDCodeDisplay
             status={appState.status}
             isSummarizing={appState.isSummarizing}
