@@ -177,14 +177,14 @@ Error generating stack: `+r.message+`
  */const uD="gl-node/";class sD{constructor(e){var i;if(e.apiKey==null)throw new Error("An API Key must be set when running in a browser");if(e.project||e.location)throw new Error("Vertex AI project based authentication is not supported on browser runtimes. Please do not provide a project or location.");this.vertexai=(i=e.vertexai)!==null&&i!==void 0?i:!1,this.apiKey=e.apiKey;const o=FS(e.httpOptions,e.vertexai,void 0,void 0);o&&(e.httpOptions?e.httpOptions.baseUrl=o:e.httpOptions={baseUrl:o}),this.apiVersion=e.apiVersion;const a=new aD(this.apiKey);this.apiClient=new _1({auth:a,apiVersion:this.apiVersion,apiKey:this.apiKey,vertexai:this.vertexai,httpOptions:e.httpOptions,userAgentExtra:uD+"web",uploader:new lD,downloader:new ZR}),this.models=new Y1(this.apiClient),this.live=new z1(this.apiClient,a,new oD),this.batches=new m0(this.apiClient),this.chats=new SE(this.models,this.apiClient),this.caches=new yE(this.apiClient),this.files=new kE(this.apiClient),this.operations=new Q1(this.apiClient),this.authTokens=new MR(this.apiClient),this.tunings=new QR(this.apiClient)}}const cD="AIzaSyBcY0xeQVf44CAUYaF0WBh4-rRuTDAatIo",Iy=new sD({apiKey:cD}),by="gemini-2.5-flash",fD=`
 You are an AI assistant specializing in medical transcriptions for conversations in Pakistan.
 The conversation may be in English, Urdu, Punjabi, Pashto, or a mix of these languages.
-the writen script must be in Urdu or English. 
+the writen script must be in English. 
 Transcribe the provided audio of a conversation between a doctor and a patient. Your task is to accurately identify who is speaking and label them as "Doctor" or "Patient".
 Remove any work or sometthing that is considered as identifier (such as Name , City , profession )
 Each object in the array must represent a single turn in the dialogue and contain two properties: "speaker" (either "Doctor" or "Patient") and "dialogue" (the transcribed text).
 Ensure the transcription is precise, preserves the original language spoken (do not translate), and the speaker attribution is correct.
 `,dD={type:Wt.ARRAY,items:{type:Wt.OBJECT,properties:{speaker:{type:Wt.STRING,description:"The identified speaker, e.g., 'Doctor', 'Patient', 'Parent'."},dialogue:{type:Wt.STRING,description:"The transcribed text for this speaker's turn."}},required:["speaker","dialogue"]}},pD=async(t,e)=>{try{const i={inlineData:{data:t,mimeType:e}},o={text:fD},f=(await Iy.models.generateContent({model:by,contents:[{parts:[i,o]}],config:{responseMimeType:"application/json",responseSchema:dD}})).text.trim();if(!f)return[];const d=JSON.parse(f);if(!Array.isArray(d))throw console.error("Parsed result is not an array:",d),new Error("The transcribed data is not in the expected format.");return d}catch(i){throw console.error("Error calling Gemini API:",i),i instanceof Error?new Error(`Gemini API Error: ${i.message}`):new Error("An unknown error occurred while communicating with the Gemini API.")}},mD=`
 You are a clinical summarizer. Read the transcript below and output TWO things:
-  The Documented Language is Just English. So it must not write at any script. but o translate it into english. 
+  The Documented Language is Just English. So it must translate it into english. 
 
   (A) Clinical Summary (SOAP format)
   S: (Subjective)
@@ -252,7 +252,7 @@ Rules:
 - If doctor vs patient role is unclear, say so.
 - Remove any word or sometthing that is considered as identifier (such as Name , City , profession )
 `,hD=`
-  The Documented Language is Just English. So it must not write at any script. but o translate it into english. 
+   The Documented Language is Just English. So it must translate it into english. 
 Follow this output format:   
 **(A) Initial Presentation of Patient:**
    You are a clinical summarizer specializing in pediatrics. Read the transcript between a doctor, child, and/or parent:
