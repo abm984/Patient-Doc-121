@@ -329,10 +329,10 @@ const App: React.FC = () => {
             isSummarizing={appState.isSummarizing}
             icdCode={appState.icdCode} */}
           {/* /> */}
-        </div>
+          </div>
 
 
-          style={{
+            style={{
               display: 'flex',
               flexDirection: isSmallScreen ? 'column' : 'row',
               gap: '20px',
