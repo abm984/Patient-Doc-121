@@ -15,7 +15,7 @@ const model = "gemini-2.5-flash";
 const transcriptionPrompt = `
 You are an AI assistant specializing in medical transcriptions for conversations in Pakistan.
 The conversation may be in English, Urdu, Punjabi, Pashto, or a mix of these languages.
-the writen script must be in Urdu or English. 
+the writen script must be in English. 
 Transcribe the provided audio of a conversation between a doctor and a patient. Your task is to accurately identify who is speaking and label them as "Doctor" or "Patient".
 Remove any work or sometthing that is considered as identifier (such as Name , City , profession )
 Each object in the array must represent a single turn in the dialogue and contain two properties: "speaker" (either "Doctor" or "Patient") and "dialogue" (the transcribed text).
@@ -94,7 +94,7 @@ export const transcribeAndDiarize = async (audioBase64: string, mimeType: string
 
 const generalSummaryPrompt = `
 You are a clinical summarizer. Read the transcript below and output TWO things:
-  The Documented Language is Just English. So it must not write at any script. but o translate it into english. 
+  The Documented Language is Just English. So it must translate it into english. 
 
   (A) Clinical Summary (SOAP format)
   S: (Subjective)
@@ -164,7 +164,7 @@ Rules:
 `;
 
 const pediatricSummaryPrompt = `
-  The Documented Language is Just English. So it must not write at any script. but o translate it into english. 
+   The Documented Language is Just English. So it must translate it into english. 
 Follow this output format:   
 **(A) Initial Presentation of Patient:**
    You are a clinical summarizer specializing in pediatrics. Read the transcript between a doctor, child, and/or parent:
