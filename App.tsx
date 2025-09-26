@@ -309,6 +309,11 @@ const App: React.FC = () => {
         >
           Generate
         </button>
+        <ClinicalSummaryDisplay
+            status={appState.status}
+            isSummarizing={appState.isSummarizing}
+            summary={appState.clinicalSummary}
+          />
 
         <div
             style={{
@@ -318,37 +323,24 @@ const App: React.FC = () => {
               padding: '20px',
             }}
           >
-          <ClinicalSummaryDisplay
-            status={appState.status}
-            isSummarizing={appState.isSummarizing}
-            summary={appState.clinicalSummary}
-          />
-
-          {/* <ICDCodeDisplay
-            status={appState.status}
-            isSummarizing={appState.isSummarizing}
-            icdCode={appState.icdCode} */}
-          {/* /> */}
-          </div>
-
-
-            style={{
-              display: 'flex',
-              flexDirection: isSmallScreen ? 'column' : 'row',
-              gap: '20px',
-              padding: '20px',
-            }}
 
           <TreatmentPlanDisplay
             status={appState.status}
             isSummarizing={appState.isSummarizing}
             treatmentPlan={appState.treatmentPlan}
           />
+          {/* <ICDCodeDisplay
+            status={appState.status}
+            isSummarizing={appState.isSummarizing}
+            icdCode={appState.icdCode} */}
+          {/* /> */}
           <ICDCodeDisplay
             status={appState.status}
             isSummarizing={appState.isSummarizing}
             icdCode={appState.icdCode}
           />
+        </div>
+
 
 
 

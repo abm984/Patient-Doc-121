@@ -94,7 +94,7 @@ export const transcribeAndDiarize = async (audioBase64: string, mimeType: string
 
 const generalSummaryPrompt = `
 You are a clinical summarizer. Read the transcript below and output TWO things:
-  It must write in 
+  The Documented Language is Just English. So it must not write at any script. but o translate it into english. 
 
   (A) Clinical Summary (SOAP format)
   S: (Subjective)
@@ -164,6 +164,7 @@ Rules:
 `;
 
 const pediatricSummaryPrompt = `
+  The Documented Language is Just English. So it must not write at any script. but o translate it into english. 
 Follow this output format:   
 **(A) Initial Presentation of Patient:**
    You are a clinical summarizer specializing in pediatrics. Read the transcript between a doctor, child, and/or parent:
