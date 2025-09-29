@@ -176,8 +176,8 @@ Error generating stack: `+r.message+`
  * SPDX-License-Identifier: Apache-2.0
  */const uD="gl-node/";class sD{constructor(e){var i;if(e.apiKey==null)throw new Error("An API Key must be set when running in a browser");if(e.project||e.location)throw new Error("Vertex AI project based authentication is not supported on browser runtimes. Please do not provide a project or location.");this.vertexai=(i=e.vertexai)!==null&&i!==void 0?i:!1,this.apiKey=e.apiKey;const o=FS(e.httpOptions,e.vertexai,void 0,void 0);o&&(e.httpOptions?e.httpOptions.baseUrl=o:e.httpOptions={baseUrl:o}),this.apiVersion=e.apiVersion;const a=new aD(this.apiKey);this.apiClient=new _1({auth:a,apiVersion:this.apiVersion,apiKey:this.apiKey,vertexai:this.vertexai,httpOptions:e.httpOptions,userAgentExtra:uD+"web",uploader:new lD,downloader:new ZR}),this.models=new Y1(this.apiClient),this.live=new z1(this.apiClient,a,new oD),this.batches=new m0(this.apiClient),this.chats=new SE(this.models,this.apiClient),this.caches=new yE(this.apiClient),this.files=new kE(this.apiClient),this.operations=new Q1(this.apiClient),this.authTokens=new MR(this.apiClient),this.tunings=new QR(this.apiClient)}}const cD="AIzaSyBcY0xeQVf44CAUYaF0WBh4-rRuTDAatIo",Iy=new sD({apiKey:cD}),by="gemini-2.5-flash",fD=`
 You are an AI assistant specializing in medical transcriptions for conversations in Pakistan.
-The conversation may be in English, Urdu, Punjabi, Pashto, or a mix of these languages.
-the writen script must be in English. 
+The conversation may be in English, Urdu, Punjabi (pakistani), Pashto, or a mix of these languages.
+the response script must be in Roman English/Urdu. 
 Transcribe the provided audio of a conversation between a doctor and a patient. Your task is to accurately identify who is speaking and label them as "Doctor" or "Patient".
 Remove any work or sometthing that is considered as identifier (such as Name , City , profession )
 Each object in the array must represent a single turn in the dialogue and contain two properties: "speaker" (either "Doctor" or "Patient") and "dialogue" (the transcribed text).
