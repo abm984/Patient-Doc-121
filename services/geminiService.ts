@@ -118,17 +118,18 @@ You are a clinical summarizer. Read the transcript below and output must ve in t
 
     **Diagnosis Confirmation:**
 
+
     Obtain comprehensive history and physical examination.
 
     Order relevant diagnostic tests, including [list labs/imaging if applicable], to confirm diagnosis and rule out differential diagnoses.
 
-    **Initial Management:**
+    Initial Management:
 
     Begin with [conservative therapy/medications/observation] depending on severity.
 
     For mild cases, initiate [first-line therapy] such as [example: NSAIDs, physical therapy, hydration, etc.].
 
-    **Pharmacologic Therapy:**
+    Pharmacologic Therapy:
 
     First-line: [drug name, dose, frequency] for [duration].
 
@@ -136,13 +137,13 @@ You are a clinical summarizer. Read the transcript below and output must ve in t
 
     Monitor for side effects and therapeutic efficacy.
 
-    **Non-Pharmacologic Management:**
+    Non-Pharmacologic Management:
 
     Recommend lifestyle modifications: [e.g., dietary changes, weight management, exercise].
 
     Refer to [e.g., physical therapy, behavioral counseling, dietary consultation] as needed.
 
-    **Follow-Up Plan:**
+    Follow-Up Plan:
 
     Reassess patient in [time frame] to monitor response to therapy.
 
@@ -150,11 +151,11 @@ You are a clinical summarizer. Read the transcript below and output must ve in t
 
     Provide education on [condition, medication adherence, red flag symptoms].
 
-    **Escalation of Care:**
+    Escalation of Care:
 
     If no improvement or condition worsens, consider [second-line therapy, referral to specialist, surgical options if applicable].
 
-    **Preventive Measures:**
+    Preventive Measures:
 
     Recommend appropriate vaccinations, screenings, or prophylactic measures per guideline.
 
@@ -246,13 +247,13 @@ Follow this output format:
 
     Order relevant diagnostic tests, including [list labs/imaging if applicable], to confirm diagnosis and rule out differential diagnoses.
 
-    **Initial Management:**
+    Initial Management:
 
     Begin with [conservative therapy/medications/observation] depending on severity.
 
     For mild cases, initiate [first-line therapy] such as [example: NSAIDs, physical therapy, hydration, etc.].
 
-    **Pharmacologic Therapy:**
+    Pharmacologic Therapy:
 
     First-line: [drug name, dose, frequency] for [duration].
 
@@ -260,13 +261,13 @@ Follow this output format:
 
     Monitor for side effects and therapeutic efficacy.
 
-    **Non-Pharmacologic Management:**
+    Non-Pharmacologic Management:
 
     Recommend lifestyle modifications: [e.g., dietary changes, weight management, exercise].
 
     Refer to [e.g., physical therapy, behavioral counseling, dietary consultation] as needed.
 
-    **Follow-Up Plan:**
+    Follow-Up Plan:
 
     Reassess patient in [time frame] to monitor response to therapy.
 
@@ -274,11 +275,11 @@ Follow this output format:
 
     Provide education on [condition, medication adherence, red flag symptoms].
 
-    **Escalation of Care:**
+    Escalation of Care:
 
     If no improvement or condition worsens, consider [second-line therapy, referral to specialist, surgical options if applicable].
 
-    **Preventive Measures:**
+    Preventive Measures:
 
     Recommend appropriate vaccinations, screenings, or prophylactic measures per guideline.
 

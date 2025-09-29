@@ -39,7 +39,7 @@ const ClinicalSummaryDisplay: React.FC<ClinicalSummaryDisplayProps> = ({ status,
         if (treatmentPlan) {
             return (
                 <div className="max-w-full overflow-auto bg-gray-200 p-4 rounded-md">
-                    <pre className="text-black whitespace-pre-wrap font-sans text-base"><ReactMarkdown>{treatmentPlan}</ReactMarkdown></pre>
+                    <pre className="text-black whitespace-pre-wrap font-sans text-base overflow-x-auto break-words"><ReactMarkdown>{treatmentPlan}</ReactMarkdown></pre>
                 </div>
             );
         }
