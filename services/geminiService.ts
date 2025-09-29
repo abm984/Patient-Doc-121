@@ -14,8 +14,8 @@ const model = "gemini-2.5-flash";
 
 const transcriptionPrompt = `
 You are an AI assistant specializing in medical transcriptions for conversations in Pakistan.
-The conversation may be in English, Urdu, Punjabi, Pashto, or a mix of these languages.
-the writen script must be in English. 
+The conversation may be in English, Urdu, Punjabi (pakistani), Pashto, or a mix of these languages.
+the response script must be in Roman English/Urdu. 
 Transcribe the provided audio of a conversation between a doctor and a patient. Your task is to accurately identify who is speaking and label them as "Doctor" or "Patient".
 Remove any work or sometthing that is considered as identifier (such as Name , City , profession )
 Each object in the array must represent a single turn in the dialogue and contain two properties: "speaker" (either "Doctor" or "Patient") and "dialogue" (the transcribed text).
