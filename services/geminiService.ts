@@ -93,58 +93,70 @@ export const transcribeAndDiarize = async (audioBase64: string, mimeType: string
 };
 
 const generalSummaryPrompt = `
-You are a clinical summarizer. Read the transcript below and output TWO things:
+You are a clinical summarizer. Read the transcript below and output must ve in this followed format:
+
+'''
+  (A) Clinical Summary (SOAP format):
+  **(B) Treatment Plan (Based on UpToDate Clinical Guidelines):**
+  **(C) ICD-10 Code:**
+  '''
+
+
+
+
+
+
   The Documented Language is Just English. So it must translate it into english. 
 
   (A) Clinical Summary (SOAP format)
-  S: (Subjective)
-  O: (Objective)
-  A: (Assessment)
-  P: (Plan)
+    S: (Subjective)
+    O: (Objective)
+    A: (Assessment)
+    P: (Plan)
 
 **(B) Treatment Plan (Based on UpToDate Clinical Guidelines):**
 
-Diagnosis Confirmation:
+    Diagnosis Confirmation:
 
-Obtain comprehensive history and physical examination.
+    Obtain comprehensive history and physical examination.
 
-Order relevant diagnostic tests, including [list labs/imaging if applicable], to confirm diagnosis and rule out differential diagnoses.
+    Order relevant diagnostic tests, including [list labs/imaging if applicable], to confirm diagnosis and rule out differential diagnoses.
 
-Initial Management:
+    Initial Management:
 
-Begin with [conservative therapy/medications/observation] depending on severity.
+    Begin with [conservative therapy/medications/observation] depending on severity.
 
-For mild cases, initiate [first-line therapy] such as [example: NSAIDs, physical therapy, hydration, etc.].
+    For mild cases, initiate [first-line therapy] such as [example: NSAIDs, physical therapy, hydration, etc.].
 
-Pharmacologic Therapy:
+    Pharmacologic Therapy:
 
-First-line: [drug name, dose, frequency] for [duration].
+    First-line: [drug name, dose, frequency] for [duration].
 
-Consider adjunctive therapy with [supportive medications or supplements] as clinically indicated.
+    Consider adjunctive therapy with [supportive medications or supplements] as clinically indicated.
 
-Monitor for side effects and therapeutic efficacy.
+    Monitor for side effects and therapeutic efficacy.
 
-Non-Pharmacologic Management:
+    Non-Pharmacologic Management:
 
-Recommend lifestyle modifications: [e.g., dietary changes, weight management, exercise].
+    Recommend lifestyle modifications: [e.g., dietary changes, weight management, exercise].
 
-Refer to [e.g., physical therapy, behavioral counseling, dietary consultation] as needed.
+    Refer to [e.g., physical therapy, behavioral counseling, dietary consultation] as needed.
 
-Follow-Up Plan:
+    Follow-Up Plan:
 
-Reassess patient in [time frame] to monitor response to therapy.
+    Reassess patient in [time frame] to monitor response to therapy.
 
-Adjust treatment based on symptom progression and test results.
+    Adjust treatment based on symptom progression and test results.
 
-Provide education on [condition, medication adherence, red flag symptoms].
+    Provide education on [condition, medication adherence, red flag symptoms].
 
-Escalation of Care:
+    Escalation of Care:
 
-If no improvement or condition worsens, consider [second-line therapy, referral to specialist, surgical options if applicable].
+    If no improvement or condition worsens, consider [second-line therapy, referral to specialist, surgical options if applicable].
 
-Preventive Measures:
+    Preventive Measures:
 
-Recommend appropriate vaccinations, screenings, or prophylactic measures per guideline.
+    Recommend appropriate vaccinations, screenings, or prophylactic measures per guideline.
 
 
 
@@ -165,7 +177,14 @@ Rules:
 
 const pediatricSummaryPrompt = `
    The Documented Language is Just English. So it must translate it into english. 
-Follow this output format:   
+Follow this output format:
+'''
+
+  **(A) Initial Presentation of Patient:**:
+  **(B) Treatment Plan (Based on UpToDate Clinical Guidelines):**
+  **(C) ICD-10 Code:** '''
+
+
 **(A) Initial Presentation of Patient:**
    You are a clinical summarizer specializing in pediatrics. Read the transcript between a doctor, child, and/or parent:
 
