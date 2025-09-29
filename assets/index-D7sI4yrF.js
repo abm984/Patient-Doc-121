@@ -199,10 +199,10 @@ You are a clinical summarizer. Read the transcript below and output must ve in t
   The Documented Language is Just English. So it must translate it into english. 
 
   (A) Clinical Summary (SOAP format)
-    S: (Subjective):
-    O: (Objective):
-    A: (Assessment):
-    P: (Plan):
+    (Subjective):
+    (Objective):
+    (Assessment):
+    (Plan):
 
 **(B) Treatment Plan (Based on UpToDate Clinical Guidelines):**
 
