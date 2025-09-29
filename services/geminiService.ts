@@ -109,10 +109,10 @@ You are a clinical summarizer. Read the transcript below and output must ve in t
   The Documented Language is Just English. So it must translate it into english. 
 
   (A) Clinical Summary (SOAP format)
-    S: (Subjective)
-    O: (Objective)
-    A: (Assessment)
-    P: (Plan)
+    S: (Subjective):
+    O: (Objective):
+    A: (Assessment):
+    P: (Plan):
 
 **(B) Treatment Plan (Based on UpToDate Clinical Guidelines):**
 
@@ -132,7 +132,7 @@ You are a clinical summarizer. Read the transcript below and output must ve in t
 
     First-line: [drug name, dose, frequency] for [duration].
 
-    Consider adjunctive therapy with [supportive medications or supplements] as clinically indicated.
+    Consider adjunctive therapy with [supportive medications or supplements] as clinically indicated. (Must consider the British Standards)
 
     Monitor for side effects and therapeutic efficacy.
 
@@ -254,7 +254,7 @@ Follow this output format:
 
   Pharmacologic Therapy:
 
-  First-line: [drug name, dose, frequency] for [duration].
+  First-line: [drug name, dose, frequency] for [duration]. (Must consider the British Standards)
 
   Consider adjunctive therapy with [supportive medications or supplements] as clinically indicated.
 
