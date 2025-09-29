@@ -180,61 +180,61 @@ const pediatricSummaryPrompt = `
 Follow this output format:
 '''
 
-  **(A) Initial Presentation of Patient:**:
+  (A) Initial Presentation of Patient:
   **(B) Treatment Plan (Based on UpToDate Clinical Guidelines):**
   **(C) ICD-10 Code:** '''
 
 
 **(A) Initial Presentation of Patient:**
-   You are a clinical summarizer specializing in pediatrics. Read the transcript between a doctor, child, and/or parent:
+      You are a clinical summarizer specializing in pediatrics. Read the transcript between a doctor, child, and/or parent:
 
-  "Please write a comprehensive initial H&P (History & Physical) note for a new patient encounter. The note should include the following sections:**
+      "Please write a comprehensive initial H&P (History & Physical) note for a new patient encounter. The note should include the following sections:**
 
-  Chief Complaint (CC):
+      **Chief Complaint (CC):**
 
-  A brief statement in the patient’s own words explaining why they are seeking care.
+      A brief statement in the patient’s own words explaining why they are seeking care.
 
-  History of Present Illness (HPI):
+      **History of Present Illness (HPI):**
 
-  A detailed chronological description of the patient's current symptoms, including onset, location, duration, characteristics, aggravating/relieving factors, associated symptoms, and any treatments tried.
+      A detailed chronological description of the patient's current symptoms, including onset, location, duration, characteristics, aggravating/relieving factors, associated symptoms, and any treatments tried.
 
-  Past Medical History (PMH):
+      **Past Medical History (PMH):**
 
-  Chronic illnesses, hospitalizations, surgeries, injuries, and past treatments.
+      Chronic illnesses, hospitalizations, surgeries, injuries, and past treatments.
 
-  Medications:
+      **Medications:**
 
-  All current medications with dosages and frequency, including over-the-counter and herbal supplements.
+      All current medications with dosages and frequency, including over-the-counter and herbal supplements.
 
-  Allergies:
+      **Allergies:**
 
-  Medication, food, or environmental allergies with reactions described.
+      Medication, food, or environmental allergies with reactions described.
 
-  Family History:
+      **Family History:**
 
-  Relevant medical history of immediate family members (parents, siblings, children).
+      Relevant medical history of immediate family members (parents, siblings, children).
 
-  Social History:
+      **Social History:**
 
-  Smoking, alcohol, drug use, occupation, living situation, sexual history, and other lifestyle factors.
+      Smoking, alcohol, drug use, occupation, living situation, sexual history, and other lifestyle factors.
 
-  Review of Systems (ROS):
+      **Review of Systems (ROS):**
 
-  A system-by-system inventory of symptoms reported by the patient.
+      A system-by-system inventory of symptoms reported by the patient.
 
-  Physical Examination:
+      **Physical Examination:**
 
-  Objective findings from head-to-toe exam, including vital signs.
+      Objective findings from head-to-toe exam, including vital signs.
 
-  Assessment:
+      **Assessment:**
 
-  Summary of key findings and differential diagnosis.
+      Summary of key findings and differential diagnosis.
 
-  Plan:
+      **Plan:**
 
-  Proposed diagnostic workup, treatments, referrals, and follow-up.
+      Proposed diagnostic workup, treatments, referrals, and follow-up.
 
-  Make sure the note is written in a formal, clinical style appropriate for use in a medical record.
+      Make sure the note is written in a formal, clinical style appropriate for use in a medical record.
 
 
 
