@@ -199,10 +199,10 @@ You are a clinical summarizer. Read the transcript below and output must ve in t
   The Documented Language is Just English. So it must translate it into english. 
 
   (A) Clinical Summary (SOAP format)
-    (Subjective):
-    (Objective):
-    (Assessment):
-    (Plan):
+    **(Subjective):**
+    **(Objective):**
+    **(Assessment):**
+    **(Plan):**
 
 **(B) Treatment Plan (Based on UpToDate Clinical Guidelines):**
 
@@ -251,7 +251,7 @@ You are a clinical summarizer. Read the transcript below and output must ve in t
 
 
 **(C) ICD-10 Code:**
- - Primary Diagnosis: [Insert Condition] — ICD-10: [e.g., M54.5 for Low Back Pain]
+ - **Primary Diagnosis: [Insert Condition] — ICD-10: [e.g., M54.5 for Low Back Pain]**
  - make sure to specify exactly each disease with their respected ICD 10 code. 
  - it must not forget the accuracy and look for UpToDate.com Resource to find
 
@@ -371,7 +371,7 @@ Follow this output format:
   Recommend appropriate vaccinations, screenings, or prophylactic measures per guideline.
 
 **(C) ICD-10 Code:**
- - Primary Diagnosis: [Insert Condition] — ICD-10: [e.g., M54.5 for Low Back Pain]
+ - **Primary Diagnosis:** [Insert Condition] — ICD-10: [e.g., M54.5 for Low Back Pain]
  - make sure to specify exactly each disease with their respected ICD 10 code. 
  - it must not forget the accuracy and look for UpToDate.com Resource to find
 
