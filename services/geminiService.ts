@@ -1,7 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import type { DialogueTurn } from "../types";
 
-const API_KEY = "AIzaSyBcY0xeQVf44CAUYaF0WBh4-rRuTDAatIo";
+const API_KEY = "AIzaSyBMkP0YG00u8Wb2UyqgBMDdl-f-rr2EOVM";
 
 // if (!API_KEY) {
 //   throw new Error("API_KEY environment variable not set");
@@ -417,3 +417,4 @@ export const generateClinicalSummary = async (transcript: DialogueTurn[], prompt
     throw error;
   }
 };
+
