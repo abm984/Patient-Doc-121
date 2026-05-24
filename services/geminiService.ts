@@ -1,7 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import type { DialogueTurn } from "../types";
 
-const API_KEY = "AIzaSyAermgN2hxrrj2wBxucFxkMRhxdo6sty7w";
+const API_KEY = "AIzaSyCjLaYOFBYCjMAYG0Whsr1dFZQBFLJduLE";
 
 // if (!API_KEY) {
 //   throw new Error("API_KEY environment variable not set");
