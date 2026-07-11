@@ -9,7 +9,7 @@ const API_KEY = "AQ.Ab8RN6LNQJPMzqE0b1pyUZxY35HHwJomow5hERgHY6SYcgsFbQ";
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
 
-const model = "gemini-2.5-flash";
+const model = "gemini-3.5-flash";
 
 
 const transcriptionPrompt = `
