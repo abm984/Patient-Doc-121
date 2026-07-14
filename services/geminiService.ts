@@ -3,6 +3,14 @@ import type { DialogueTurn } from "../types";
 
 const API_KEY = "AIzaSyAu8TX691fNv4cUr3yQcvMFqumwIe7Jwpk";
 
+
+
+// services/geminiService.ts
+const API_KEY = process.env.API_KEY;
+if (!API_KEY) {
+  throw new Error("API_KEY environment variable not set");
+}
+const ai = new GoogleGenAI({ apiKey: API_KEY });
 // if (!API_KEY) {
 //   throw new Error("API_KEY environment variable not set");
 // }
